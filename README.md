@@ -44,16 +44,19 @@ Once we have a superposition of all the input states using QRAM next step is Gro
 Grover’s algorithms (also called database search algorithm) amplifies the amplitude of the target states i.e states with alternating bits using an oracle. Oracle is an important part of the Grover's algorithms as it contains logic to amplify the states.
 
 ### Oracle 
-In QAB module the oracle has 3 sections as mentioned below
+In QAB module the oracle has 3 sections as mentioned below   
+Section 1 targets state that has odd numbered bits as "1" and even numbered as "0". For Ex for 3 bit string it will target "010".  
+Section 2 targets state that has odd numbered bits as "0" and even numbered as "1". For Ex for 3 bit string it will target "101".   
+And In section 3 There is a logical AND (i.e A CCX gate) Between those 2 states so that alternating bit string are amplified. 
 ```python
-qc.barrier() #Section 1 (odd numbered register as "0" and even "1")
+qc.barrier() #Section 1 (odd numbered register as "1" and even "0")
 
 qc.mct(odd_register, temp[0])
 qc.x(temp[1])
 qc.mct(even_register, temp[1])
 qc.ccx(temp[0],temp[1],temp[2])
     
-qc.barrier() #Section 2 (even numbered register as "0" and odd "1")
+qc.barrier() #Section 2 (even numbered register as "1" and odd "0")
     
 qc.x(temp[3])
 qc.mct(odd_register, temp[3])
