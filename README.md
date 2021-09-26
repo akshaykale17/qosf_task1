@@ -84,7 +84,7 @@ qc.ccx(temp[0],temp[1],temp[2])
 qc.barrier()
 ```
 # Examples 
-Check [this]() JupyterNotebook to see examples.
+Check [this](https://github.com/akshaykale17/qosf_task1/blob/main/example.ipynb) JupyterNotebook to see examples.
 
 # References
 [1] Grover, Lov K.. “A fast quantum mechanical algorithm for database search.” STOC '96 (1996).  
