@@ -1,4 +1,4 @@
-# qosf_task1
+# Quantum Alternate Bits (QAB)
 The Quantum Alternate Bits (QAB) module is designed such that it takes 3 parameters   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = Number of address bits  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = number of bits for each value  
